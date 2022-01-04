@@ -1,0 +1,19 @@
+SWAP = 0
+MIN = 0
+INDEX = 0
+
+loop N from 0 to ARRAY.length - 1
+	MIN = ARRAY[N]
+	INDEX = N
+	loop M from N to ARRAY.length - 1
+		if min > ARRAY[M]
+			MIN = ARRAY[M]
+			INDEX = M
+		end if
+		M = M + 1
+	end loop
+	SWAP = ARRAY[N]
+	ARRAY[N] = ARRAY[INDEX]
+	ARRAY[INDEX] = SWAP
+	N = N + 1
+end loop

@@ -1,0 +1,15 @@
+SWAP = 0
+UNSORTED = true
+
+loop while UNSORTED
+	UNSORTED = false
+	loop N from 0 to ARRAY.length-2
+		if ARRAY[N] > ARRAY[N+1] then
+			SWAP = ARRAY[N]
+			ARRAY[N] = ARRAY[N+1]
+			ARRAY[N+1] = SWAP
+			UNSORTED = true
+		end if
+		N = N + 1
+	end loop
+end loop
