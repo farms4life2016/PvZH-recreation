@@ -1,9 +1,15 @@
 package farms4life2016;
 
-public class Driver {
+import farms4life2016.processing.Controller;
 
+public class Driver {
+	
+    /**
+     * This class is solely used for the main method.
+     * @param args 
+     */
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+        Controller.run(); 
+    }  
     
 }
