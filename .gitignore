@@ -1,0 +1,5 @@
+# ignore bin files
+bin
+
+# ignore class files
+.class
