@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+
+        <script src="cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+
+        <script src="spy.js"></script>
+
+        <script>
+            class player {
+                life = 100;
+                mana = 10;
+                golf_score = 0;
+                angler_quest = 0;
+            }
+
+            class calam_player extends player {
+                rage = 0;
+                adr = 0;
+            }
+
+            const snowfallen_wendy = new player();
+            snowfallen_wendy.angler_quest = 50;
+            snowfallen_wendy.mana = 200;
+            const hug_ralsei = new player();
+            hug_ralsei.life = 500;
+            const noelle_holiday = new calam_player();
+            noelle_holiday.life = 725;
+            
+            console.log(player);
+            console.log(snowfallen_wendy);
+            console.log(hug_ralsei);
+            console.log(noelle_holiday);
+
+
+        </script>
+
+    </body>
+
+</html>
