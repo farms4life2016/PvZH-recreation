@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- 	<script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"> </script> 	-->
+		
+	<head>
+		<meta charset="utf-8"/> <!--not sure what this does-->
+		<title>Stay Focused 3!</title> <!--this changes the title of the website-->
+
+		
+	</head>
+
+	<body onload="start()"> <!-- onload="repaint()" -->
+	
+		<!-- this is a comment -->
+
+		<canvas id="gamewindow" width="1280" height="720">
+			<!-- this message will display if the canvas fails to display -->
+			<p>Unfortunately your browser does not support the canvas element in HTML. Please use or update to the latest browser such as Google Chrome.</p>
+		</canvas>
+		<style>
+			canvas {border: 1px solid black;}
+		</style>  <!--adds a black border around the canvas-->
+		
+		<!-- random code -->
+		<p id="text">The zombies are coming...</p>
+		<button type="button" onclick="play()">Play</button>
+		<button type="button" onclick="pause()">Pause</button>
+
+		<!--must specify module to use import and exports-->
+		<script type="module" src="pong.js"></script>
+
+	</body>
+</html>
