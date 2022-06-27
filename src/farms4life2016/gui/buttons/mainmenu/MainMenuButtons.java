@@ -9,11 +9,13 @@ public class MainMenuButtons extends AbstractButton {
 
     /*
     Buttons required: 
-    - play
+    - play (multiplayer, join game or host)
     - collection
+    - achivements
     - wiki?
     - github?
     - updates?
+    - zen garden?
     */
 
     @Override
