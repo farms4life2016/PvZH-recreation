@@ -8,6 +8,7 @@ import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
+import farms4life2016.gui.StringDrawer;
 import farms4life2016.gui.displays.MainMenuDisplay;
 
 
@@ -27,7 +28,7 @@ public class Controller {
     public static void initGUI() {
 
         //variables
-        //new StringDrawer();
+        new StringDrawer();
         
         cdLayout = new CardLayout();
         window = new JFrame("Plants vs. Zombies Heroes - Recreation"); //name it 
@@ -41,8 +42,8 @@ public class Controller {
         
         //add panel to frame
         c.setLayout(cdLayout);
-        c.add("menu", mainMenu);
-        cdLayout.show(c, "menu");
+        c.add("mainmenu", mainMenu);
+        cdLayout.show(c, "mainmenu");
         mainMenu.setBackground(Color.GRAY);
 
         //why do we have to add this listener here I'm so confused

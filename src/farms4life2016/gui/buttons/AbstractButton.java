@@ -2,7 +2,7 @@ package farms4life2016.gui.buttons;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Rectangle;
+import farms4life2016.util.Rectangle;
 import java.awt.Graphics2D;
 
 import java.awt.event.MouseEvent;
