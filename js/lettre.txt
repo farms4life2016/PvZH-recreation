@@ -1,18 +1,59 @@
-Dear Ms. Schwartz,
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
 
-As my grade 12 journey comes to a close, I would like to thank you greatly for what you’ve done to help me reach where I am today. Unfortunately, we didn’t meet for the majority of TOK, but I could tell that you were working behind ManageBac on our CAS activities and the TOK essay. I also appreciate how you managed gardening club. Sadly, we don't have enough time this year to plant the tree, so maybe the new tree will be up the next time I come visit.
+    <script>
+    var config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 600,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 200 }
+            }
+        },
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
 
-I am pleased to announce that I will be studying at the Univerty of Waterloo in the fall.
+    var game = new Phaser.Game(config);
 
+    function preload ()
+    {
+        this.load.setBaseURL('http://labs.phaser.io');
 
-I've noticed that you don't like to speak very loudly. 
+        this.load.image('sky', 'assets/skies/space3.png');
+        this.load.image('logo', 'assets/sprites/phaser3-logo.png');
+        this.load.image('red', 'assets/particles/red.png');
+    }
 
-I sometimes found it difficult to make out what you say, partially due to my (former) hearing problems, and I always found it shocking when you respond to something I whisper at the back of the class. Anyways, 
+    function create ()
+    {
+        this.add.image(400, 300, 'sky');
 
-I would like to formally apologize for wasting chemicals during the IA. I got a little carried away with testing out an idea was never tested before and potentially making a great discovery - which ultimately didn't work out. I'm hoping that the leftovers from my failed experiment were reused or disposed of properly; perhaps the acetic acid can be used elsewhere, maybe in a lab to make esters? I heard someone say that you can turn someone's alcoholic drink into a fruit-smelling non-alcoholic drink by adding vinegar or lemon juice - could I possibly do that to avoid alcohol in university?
+        var particles = this.add.particles('red');
 
+        var emitter = particles.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
 
+        var logo = this.physics.add.image(400, 100, 'logo');
 
-Dear Ms. Xie,
+        logo.setVelocity(100, 200);
+        logo.setBounce(1, 1);
+        logo.setCollideWorldBounds(true);
 
-I'm trying to learn some Javascript (Js) over the summer. I often find myself just translating Java code from my head into Js on the computer, but it doesn't always work - partially because the syntax is slightly different. Apparently Js does not really have OOP.
+        emitter.startFollow(logo);
+    }
+    </script>
+
+</body>
+</html>
