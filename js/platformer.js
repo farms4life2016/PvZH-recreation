@@ -33,10 +33,10 @@ function preload() {
 
     this.load.image("sky", "large assets cause back pain\\sky.png");
     this.load.image("ground", "large assets cause back pain\\platform.png");
-    this.load.image('star', 'large assets cause back pain/star.png');
-    this.load.image('bomb', 'large assets cause back pain/bomb.png');
+    this.load.image('star', 'large assets cause back pain\\star.png');
+    this.load.image('bomb', 'large assets cause back pain\\bomb.png');
     this.load.spritesheet('dude', 
-        'large assets cause back pain/dude.png',
+        'large assets cause back pain\\dude.png',
         { frameWidth: 32, frameHeight: 48 }
     );
 }
