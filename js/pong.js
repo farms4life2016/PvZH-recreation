@@ -141,5 +141,5 @@ function bounceBall(surface) {
 
 //keyboard listener
 document.addEventListener('keydown', keyDown);
-document.addEventListener('click', onClick)
+document.addEventListener('click', onClick);
 document.addEventListener('keyup', keyUp);
