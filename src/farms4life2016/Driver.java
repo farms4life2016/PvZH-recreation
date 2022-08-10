@@ -21,12 +21,34 @@ public class Driver {
     public static void main(String[] args) throws IOException {
         //Controller.run(); 
         //now's your chance to be a big shot
-        ServerSocket ss = new ServerSocket(6667);
-        
-        Socket s = new Socket(ss.getInetAddress().getHostAddress(), ss.getLocalPort());
+        Test test = new Test(10);
+        test.run();
 
-        BufferedReader br = new BufferedReader( new InputStreamReader(s.getInputStream()) );
-        BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
-    }  
+        Thread t = new Thread(test, "print some squares");
+        System.out.println(t.getState());
+        t.run();
+
+
+    } 
     
+    
+    
+}
+
+class Test implements Runnable {
+
+    int limit = 0;
+
+    public Test(int lim) {
+        limit = lim;
+    }
+
+    @Override
+    public void run() {
+        // TODO Auto-generated method stub
+        for (int i = 1; i <= limit; i++) {
+            System.out.println(i*i);
+        }
+    }
+
 }
